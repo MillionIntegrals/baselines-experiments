@@ -104,3 +104,9 @@ venv.bak/
 .mypy_cache/
 
 .idea/
+
+# ALGORITHM OUTPUTS
+/experiments/output
+
+# APPLICATION SECRETS
+/secrets
