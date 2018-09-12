@@ -1,0 +1,4 @@
+docker_restart_handler_state: restarted
+
+nvidia_cuda_package_url: http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.2.148-1_amd64.deb
+nvidia_cuda_key_url: http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub

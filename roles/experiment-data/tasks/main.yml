@@ -1,0 +1,21 @@
+---
+- name: Set correct owner to the experimenets directory
+  become: yes
+  file:
+    path: /experiments
+    owner: ubuntu
+    state: directory
+
+- name: Copy experiment configuration to a destination server
+  become: yes
+  copy:
+    src: ./experiments/
+    dest: /experiments
+    owner: ubuntu
+
+- name: Pull docker image
+  docker_image:
+    name: millionintegrals/baselines-experiments:latest
+    pull: true
+    force: true
+

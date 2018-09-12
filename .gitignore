@@ -110,3 +110,9 @@ venv.bak/
 
 # APPLICATION SECRETS
 /secrets
+
+# VARIOUS ANSIBLE FILES
+/inventory
+/roles/geerlingguy.docker
+/roles/geerlingguy.pip
+/experiments.retry
