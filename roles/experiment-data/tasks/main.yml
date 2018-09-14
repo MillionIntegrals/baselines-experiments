@@ -19,3 +19,16 @@
     pull: true
     force: true
 
+- name: Project configuration template
+  template:
+    src: templates/velproject.j2
+    dest: /experiments/.velproject.yaml
+
+- name: Project task list
+  template:
+    src: templates/tasklist.j2
+    dest: /experiments/tasklist.yaml
+
+- name: Run experiment
+  command: "python /experiments/run_experiment.py /experiments/tasklist.yaml"
+

@@ -1,0 +1,7 @@
+---
+# User role -
+- name: User environment setup
+  hosts: rl
+  user: ubuntu
+  roles:
+  - experiment-data

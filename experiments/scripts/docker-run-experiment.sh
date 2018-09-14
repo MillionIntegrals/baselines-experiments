@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-shift
-docker run --rm -it \
+docker run --rm \
     --runtime=nvidia \
-    --mount type=bind,source=/experiments,target=/experiments \
+    --mount type=bind,source=$(realpath .),target=/experiments \
     millionintegrals/baselines-experiments \
-    vel atari/a2c/breakout_a2c.yaml train "$@"
+    vel "$@"

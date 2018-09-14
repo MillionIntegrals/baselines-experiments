@@ -1,0 +1,17 @@
+---
+# Root role - set up server packages that require higher privilege
+- name: Priviledged server setup
+  hosts: rl
+  become: yes
+  roles:
+    - role: geerlingguy.docker
+      vars:
+        docker_users:
+          - ubuntu
+    - role: geerlingguy.pip
+      vars:
+        pip_install_packages:
+        - docker
+        - daemonize
+        - pyyaml
+    - role: nvidia-docker

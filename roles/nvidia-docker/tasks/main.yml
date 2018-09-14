@@ -2,7 +2,7 @@
 
 - name: Download CUDA package
   get_url:
-    url: {{nvidia_cuda_package_url}}
+    url: "{{ nvidia_cuda_package_url }}"
     dest: /tmp/cuda_install.deb
 
 - name: CUDA | Install downloaded deb package for Ubuntu 16.04
@@ -11,7 +11,7 @@
 
 - name: Install cuda repo key
   apt_key:
-    url: {{nvidia_cuda_key_url}}
+    url: "{{nvidia_cuda_key_url}}"
     state: present
 
 - name: Install cuda

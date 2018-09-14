@@ -3,7 +3,7 @@ storage:
 
   backend:
     name: vel.storage.backend.mongodb
-    uri: !param mongodb_url='mongodb://localhost:27017/'
+    uri: {{ mongodb_connection_url }}
     database: deep_learning
 
   streaming:
