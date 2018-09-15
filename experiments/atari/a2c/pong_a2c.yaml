@@ -1,7 +1,7 @@
 name: 'pong_a2c'
 
 env:
-  name: vel.rl.env.atari.classic_atari
+  name: vel.rl.env.classic_atari
   game: 'PongNoFrameskip-v4'
 
 
