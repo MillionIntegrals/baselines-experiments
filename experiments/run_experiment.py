@@ -26,8 +26,8 @@ EXPERIMENT_DICTIONARY = {
 
 
 def handle_experiment(path, number):
-    cmdline = 'bash ./scripts/docker-run-experiment.sh {} train -r {}'.format(
-        EXPERIMENT_DICTIONARY[path], number
+    cmdline = 'bash ./scripts/docker-run-experiment.sh {} train -r {} --seed {}'.format(
+        EXPERIMENT_DICTIONARY[path], number, number
     )
     print(">>> {}".format(cmdline))
     os.system(cmdline)
