@@ -17,12 +17,22 @@ data_count = data_frame.groupby('run_name').value_loss.count()
 
 print("==============================================================")
 print("Data count:")
-print(data_count)
+print(data_count.to_string())
 
 print("==============================================================")
 print("FPS:")
-print(data_frame.groupby('run_name').fps.mean())
+print(data_frame.groupby('run_name').fps.mean().to_string())
 
 print("==============================================================")
-print("Max rewards:")
-print(data_frame.groupby('run_name')['PMM:episode_rewards'].max())
+last_rows = data_frame.set_index(['run_name', 'epoch_idx']).sort_index().groupby(level=0).last()
+print("Last rewards:")
+print(last_rows['PMM:episode_rewards'].to_string())
+
+
+def safe_mean(data):
+    return data[(data < data.max()) & (data > data.min())].mean()
+
+
+print("==============================================================")
+print("Per-model means:")
+print(last_rows.groupby('model_name')['PMM:episode_rewards'].apply(safe_mean).to_string())

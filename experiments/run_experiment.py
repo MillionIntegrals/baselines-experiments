@@ -30,6 +30,14 @@ EXPERIMENT_DICTIONARY = {
     "pong_ppo": "atari/ppo/pong_ppo.yaml",
     "seaquest_ppo": "atari/ppo/seaquest_ppo.yaml",
     "spaceinvaders_ppo": "atari/ppo/spaceinvaders_ppo.yaml",
+
+    "beamrider_acer": "atari/acer/beamrider_acer.yaml",
+    "breakout_acer": "atari/acer/breakout_acer.yaml",
+    "qbert_acer": "atari/acer/qbert_acer.yaml",
+    "enduro_acer": "atari/acer/enduro_acer.yaml",
+    "pong_acer": "atari/acer/pong_acer.yaml",
+    "seaquest_acer": "atari/acer/seaquest_acer.yaml",
+    "spaceinvaders_acer": "atari/acer/spaceinvaders_acer.yaml",
 }
 
 
