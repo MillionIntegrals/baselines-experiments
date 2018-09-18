@@ -38,6 +38,22 @@ EXPERIMENT_DICTIONARY = {
     "pong_acer": "atari/acer/pong_acer.yaml",
     "seaquest_acer": "atari/acer/seaquest_acer.yaml",
     "spaceinvaders_acer": "atari/acer/spaceinvaders_acer.yaml",
+
+    "beamrider_trpo_jrx": "atari/trpo_jrx/beamrider_trpo_jrx.yaml",
+    "breakout_trpo_jrx": "atari/trpo_jrx/breakout_trpo_jrx.yaml",
+    "qbert_trpo_jrx": "atari/trpo_jrx/qbert_trpo_jrx.yaml",
+    "enduro_trpo_jrx": "atari/trpo_jrx/enduro_trpo_jrx.yaml",
+    "pong_trpo_jrx": "atari/trpo_jrx/pong_trpo_jrx.yaml",
+    "seaquest_trpo_jrx": "atari/trpo_jrx/seaquest_trpo_jrx.yaml",
+    "spaceinvaders_trpo_jrx": "atari/trpo_jrx/spaceinvaders_trpo_jrx.yaml",
+
+    "beamrider_trpo_oai": "atari/trpo_oai/beamrider_trpo_oai.yaml",
+    "breakout_trpo_oai": "atari/trpo_oai/breakout_trpo_oai.yaml",
+    "qbert_trpo_oai": "atari/trpo_oai/qbert_trpo_oatrpo_oaiyaml",
+    "enduro_trpo_oai": "atari/trpo_oai/enduro_trpo_oai.yaml",
+    "pong_trpo_oai": "atari/trpo_oai/pong_trpo_oai.yaml",
+    "seaquest_trpo_oai": "atari/trpo_oai/seaquest_trpo_oai.yaml",
+    "spaceinvaders_trpo_oai": "atari/trpo_oai/spaceinvaders_trpo_oai.yaml",
 }
 
 

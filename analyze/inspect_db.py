@@ -13,7 +13,7 @@ db = client.deep_learning
 metrics = list(db.metrics.find())
 
 data_frame = pd.DataFrame(metrics)
-data_count = data_frame.groupby('run_name').value_loss.count()
+data_count = data_frame.groupby('run_name')['PMM:episode_rewards'].count()
 
 print("==============================================================")
 print("Data count:")
