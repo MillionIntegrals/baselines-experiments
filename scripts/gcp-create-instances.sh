@@ -24,13 +24,13 @@
 #gcloud compute instances create rl-worker-0020 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=seaquest_acer,algo=acer
 #gcloud compute instances create rl-worker-0021 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=spaceinvaders_acer,algo=acer
 
-gcloud compute instances create rl-worker-0022 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=breakout_trpo_jrx,algo=trpo_jrx
-gcloud compute instances create rl-worker-0023 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=qbert_trpo_jrx,algo=trpo_jrx
-gcloud compute instances create rl-worker-0024 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=beamrider_trpo_jrx,algo=trpo_jrx
-gcloud compute instances create rl-worker-0025 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=enduro_trpo_jrx,algo=trpo_jrx
-gcloud compute instances create rl-worker-0026 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=pong_trpo_jrx,algo=trpo_jrx
-gcloud compute instances create rl-worker-0027 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=seaquest_trpo_jrx,algo=trpo_jrx
-gcloud compute instances create rl-worker-0028 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=spaceinvaders_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0022 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=breakout_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0023 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=qbert_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0024 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=beamrider_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0025 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=enduro_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0026 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=pong_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0027 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=seaquest_trpo_jrx,algo=trpo_jrx
+#gcloud compute instances create rl-worker-0028 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=spaceinvaders_trpo_jrx,algo=trpo_jrx
 
 #gcloud compute instances create rl-worker-0029 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=breakout_trpo_oai,algo=trpo_oai
 #gcloud compute instances create rl-worker-0030 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=qbert_trpo_oai,algo=trpo_oai
@@ -39,3 +39,11 @@ gcloud compute instances create rl-worker-0028 --source-instance-template rl-04c
 #gcloud compute instances create rl-worker-0033 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=pong_trpo_oai,algo=trpo_oai
 #gcloud compute instances create rl-worker-0034 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=seaquest_trpo_oai,algo=trpo_oai
 #gcloud compute instances create rl-worker-0035 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=spaceinvaders_trpo_oai,algo=trpo_oai
+
+gcloud compute instances create rl-worker-0036 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=breakout_dqn,algo=dqn
+gcloud compute instances create rl-worker-0037 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=qbert_dqn,algo=dqn
+gcloud compute instances create rl-worker-0038 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=beamrider_dqn,algo=dqn
+gcloud compute instances create rl-worker-0039 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=enduro_dqn,algo=dqn
+gcloud compute instances create rl-worker-0040 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=pong_dqn,algo=dqn
+gcloud compute instances create rl-worker-0041 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=seaquest_dqn,algo=dqn
+gcloud compute instances create rl-worker-0042 --source-instance-template rl-04cpu --zone=europe-west1-b --labels experiment=spaceinvaders_dqn,algo=dqn

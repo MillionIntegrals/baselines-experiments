@@ -54,6 +54,14 @@ EXPERIMENT_DICTIONARY = {
     "pong_trpo_oai": "atari/trpo_oai/pong_trpo_oai.yaml",
     "seaquest_trpo_oai": "atari/trpo_oai/seaquest_trpo_oai.yaml",
     "spaceinvaders_trpo_oai": "atari/trpo_oai/spaceinvaders_trpo_oai.yaml",
+
+    "beamrider_dqn": "atari/dqn/beamrider_dqn.yaml",
+    "breakout_dqn": "atari/dqn/breakout_dqn.yaml",
+    "qbert_dqn": "atari/dqn/qbert_dqn.yaml",
+    "enduro_dqn": "atari/dqn/enduro_dqn.yaml",
+    "pong_dqn": "atari/dqn/pong_dqn.yaml",
+    "seaquest_dqn": "atari/dqn/seaquest_dqn.yaml",
+    "spaceinvaders_dqn": "atari/dqn/spaceinvaders_dqn.yaml",
 }
 
 
