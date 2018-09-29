@@ -11,26 +11,26 @@ vec_env:
 
 
 model:
-  name: vel.rl.reinforcers.policy_gradient.policy_gradient_model_separate
+  name: vel.rl.models.policy_gradient_model_separate
 
   policy_backbone:
-    name: vel.models.rl.nature_cnn_small
+    name: vel.rl.models.backbone.nature_cnn_small
     input_width: 84
     input_height: 84
     input_channels: 4  # The same as frame_history
 
   value_backbone:
-    name: vel.models.rl.nature_cnn_small
+    name: vel.rl.models.backbone.nature_cnn_small
     input_width: 84
     input_height: 84
     input_channels: 4  # The same as frame_history
 
 
 reinforcer:
-  name: vel.rl.reinforcers.policy_gradient
+  name: vel.rl.reinforcers.on_policy_iteration_reinforcer
 
-  policy_gradient:
-    name: vel.rl.reinforcers.policy_gradient.trpo
+  algo:
+    name: vel.rl.algo.policy_gradient.trpo
     max_kl: 0.001
     cg_iters: 10
     cg_damping: 0.001
@@ -40,10 +40,10 @@ reinforcer:
     vf_iters: 3
 
     entropy_coef: 0.0
-#    max_grad_norm: 0.5
+  #    max_grad_norm: 0.5
 
   env_roller:
-    name: vel.rl.env_roller.step_env_roller
+    name: vel.rl.env_roller.vec.step_env_roller
     gae_lambda: 1.00 # Generalized Advantage Estimator Lambda parameter
 
   # In openAI baselines they rollout single env for 512 steps.
