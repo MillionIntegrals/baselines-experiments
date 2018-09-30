@@ -30,7 +30,10 @@ print(last_rows['PMM:episode_rewards'].to_string())
 
 
 def safe_mean(data):
-    return data[(data < data.max()) & (data > data.min())].mean()
+    if len(data) > 2:
+        return data.sort_values().iloc[1:-1].mean()
+    else:
+        return data.mean()
 
 
 print("==============================================================")
