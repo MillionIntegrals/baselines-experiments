@@ -49,7 +49,7 @@ EXPERIMENT_DICTIONARY = {
 
     "beamrider_trpo_oai": "atari/trpo_oai/beamrider_trpo_oai.yaml",
     "breakout_trpo_oai": "atari/trpo_oai/breakout_trpo_oai.yaml",
-    "qbert_trpo_oai": "atari/trpo_oai/qbert_trpo_oatrpo_oaiyaml",
+    "qbert_trpo_oai": "atari/trpo_oai/qbert_trpo_oai.yaml",
     "enduro_trpo_oai": "atari/trpo_oai/enduro_trpo_oai.yaml",
     "pong_trpo_oai": "atari/trpo_oai/pong_trpo_oai.yaml",
     "seaquest_trpo_oai": "atari/trpo_oai/seaquest_trpo_oai.yaml",
@@ -120,4 +120,3 @@ if __name__ == '__main__':
     else:
         daemon = Daemonize(app="run_experiment", pid=pid, action=main, chdir=dirname)
         daemon.start()
-
