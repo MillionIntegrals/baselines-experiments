@@ -40,11 +40,11 @@ reinforcer:
 
     priority_epsilon: 1.0e-6
 
-  epsilon_schedule:
-    name: vel.schedules.linear_and_constant
-    end_of_interpolation: 0.1
-    initial_value: 1.0
-    final_value: 0.1
+    epsilon_schedule:
+      name: vel.schedules.linear_and_constant
+      end_of_interpolation: 0.1
+      initial_value: 1.0
+      final_value: 0.1
 
   batch_rollout_rounds: 4 # How many environment steps to perform per batch of training
   batch_size: 32
