@@ -4,30 +4,40 @@ env:
   name: vel.rl.env.classic_atari
   game: 'PongNoFrameskip-v4'
 
+
 model:
-  name: vel.rl.reinforcers.dqn.dqn_dueling_model
+  name: vel.rl.models.q_dueling_model
 
   backbone:
-    name: vel.models.rl.double_nature_cnn
+    name: vel.rl.models.backbone.double_nature_cnn
     input_width: 84
     input_height: 84
     input_channels: 4  # The same as frame_stack
 
 
 reinforcer:
-  name: vel.rl.reinforcers.dqn
-  double_dqn: true
+  name: vel.rl.reinforcers.buffered_single_off_policy_iteration_reinforcer
+
+  algo:
+    name: vel.rl.algo.dqn
+
+    double_dqn: true
+    target_update_frequency: 10_000  # After how many batches to update the target network
+    max_grad_norm: 0.5
 
   env_roller:
-    name: vel.rl.env_roller.prioritized_replay_q_roller
+    name: vel.rl.env_roller.single.prioritized_replay_roller_epsgreedy
+
     buffer_capacity: 250_000
     buffer_initial_size: 30_000
     frame_stack: 4
+
     priority_exponent: 0.6
     priority_weight:
       name: vel.schedules.linear
       initial_value: 0.4
       final_value: 1.0
+
     priority_epsilon: 1.0e-6
 
   epsilon_schedule:
@@ -36,13 +46,10 @@ reinforcer:
     initial_value: 1.0
     final_value: 0.1
 
-  train_frequency: 4  # How many environment steps to perform per batch of training
+  batch_rollout_rounds: 4 # How many environment steps to perform per batch of training
   batch_size: 32
 
-  target_update_frequency: 10_000  # After how many batches to update the target network
-
   discount_factor: 0.99
-  max_grad_norm: 0.5
 
 
 optimizer:
