@@ -1,8 +1,8 @@
-name: 'half_cheetah_trpo'
+name: 'walker2d_trpo'
 
 env:
   name: vel.rl.env.mujoco
-  game: 'HalfCheetah-v2'
+  game: 'Walker2d-v2'
 
 
 vec_env:
@@ -69,7 +69,6 @@ commands:
     name: vel.rl.commands.rl_train_command
     total_frames: 1.0e6
     batches_per_epoch: 2
-    openai_logging: true
 
   record:
     name: vel.rl.commands.record_movie_command
