@@ -23,8 +23,8 @@ model:
 reinforcer:
   name: vel.rl.reinforcers.on_policy_iteration_reinforcer
 
-  policy_gradient:
-    name: vel.rl.reinforcers.policy_gradient.ppo
+  algo:
+    name: vel.rl.algo.policy_gradient.ppo
     entropy_coefficient: 0.01
     value_coefficient: 0.5
 
