@@ -32,13 +32,15 @@ service_account_file: /home/yourdir/gcp/serviceaccount.json
 ansible-galaxy install geerlingguy.docker geerlingguy.pip
 ```
 
-4. Set up experiment environment on all machines
+4. Change ansible vault file to contain proper MongoDB login information for your database
+
+5. Set up experiment environment on all machines
 
 ```bash
 bash ./scripts/ansible-full-setup.sh
 ```
 
-5. Start running the experiments
+6. Start running the experiments
 
 ```bash
 bash ./scripts/ansible-run-experiments.sh
