@@ -20,6 +20,7 @@ auth_kind: serviceaccount
 groups:
   rl: true
 filters:
+  - 'labels.algo = ppo'
   - any filters you may want
 service_account_file: /home/yourdir/gcp/serviceaccount.json
 
